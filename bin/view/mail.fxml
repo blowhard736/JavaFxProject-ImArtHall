@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+
+<HBox xmlns:fx="http://javafx.com/fxml" prefHeight="360"
+	prefWidth="800" spacing="10" fx:controller="control.MailController">
+	<padding>
+		<Insets top="20" right="20" bottom="20" left="20" />
+	</padding>
+	<children>
+		<VBox prefWidth="300" prefHeight="350" spacing="10">
+			<padding>
+				<Insets right="10" />
+			</padding>
+			<children>
+				<HBox spacing="7">
+					<children>
+						<Label text="구글아이디" prefWidth="80" alignment="CENTER" />
+						<TextField fx:id="txtId" prefWidth="150"
+							promptText="아이디" />
+
+					</children>
+				</HBox>
+
+				<HBox spacing="7">
+					<children>
+						<Label text="구글 비밀번호" prefWidth="80" alignment="CENTER" />
+						<PasswordField fx:id="txtPass" prefWidth="150" />
+					</children>
+				</HBox>
+
+				<Label text="-------------------------" alignment="CENTER"
+					prefWidth="300" />
+				<Label text="받는 사람" />
+				<HBox spacing="7">
+					<children>
+						<Label text="메일주소" prefWidth="80" alignment="CENTER" />
+						<TextField fx:id="txtToAddr" prefWidth="150"
+							promptText="메일주소" />
+					</children>
+				</HBox>
+
+				<HBox spacing="7">
+					<children>
+						<Label text="이름" prefWidth="80" alignment="CENTER" />
+						<TextField fx:id="txtToName" prefWidth="150"
+							promptText="받는 사람 이름" />
+					</children>
+				</HBox>
+
+				<Label text="-------------------------" alignment="CENTER"
+					prefWidth="300" />
+				<Label text="보내는 사람" />
+
+				<HBox spacing="7">
+					<children>
+						<Label text="메일주소" prefWidth="60" alignment="CENTER" />
+						<TextField fx:id="txtFromAddr" prefWidth="170"
+							promptText="메일주소" />
+					</children>
+				</HBox>
+
+				<HBox spacing="7">
+					<children>
+						<Label text="이름" prefWidth="60" alignment="CENTER" />
+						<TextField fx:id="txtFromName" prefWidth="170"
+							promptText="보내는 사람 이름" />
+					</children>
+				</HBox>
+
+				<HBox spacing="10" alignment="CENTER">
+					<padding>
+						<Insets top="10" />
+					</padding>
+					<Button fx:id="btnSend" text="전송" />
+					<Button fx:id="btnCancel" text="초기화" />
+					<Button fx:id="btnEnd" text="종료" />
+				</HBox>
+
+			</children>
+		</VBox>
+
+		<VBox prefWidth="400" prefHeight="420" spacing="5">
+			<children>
+				<Label text="메일제목" />
+				<TextField fx:id="txtTitle" prefWidth="150"
+					promptText="제목" />
+
+				<HBox spacing="10">
+					<children>
+						<Label text="첨부파일" />
+						<TextField fx:id="txtFileAddr" prefWidth="250"
+							promptText="파일주소" disable="true" />
+						<Button fx:id="btnAttachFile" text="첨부파일" />
+					</children>
+				</HBox>
+
+				<Label text="메일 내용" />
+				<TextArea fx:id="txtContents" prefHeight="200"
+					prefWidth="450" promptText="메일내용" />
+			</children>
+		</VBox>
+	</children>
+</HBox>
+

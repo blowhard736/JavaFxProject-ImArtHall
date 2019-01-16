@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.CheckBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+	fx:controller="control.MainController" prefHeight="850"
+	prefWidth="1550">
+	<children>
+		<HBox alignment="CENTER">
+			<padding>
+				<Insets top="10" right="10" bottom="10" left="10" />
+			</padding>
+			<ImageView pickOnBounds="true" preserveRatio="true"
+				fitWidth="800">
+				<image>
+					<Image url="/image/arthall.png" />
+				</image>
+			</ImageView>
+		</HBox>
+
+		<HBox>
+			<VBox>
+				<HBox>
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="10" />
+					</padding>
+					<spacing>300</spacing>
+					<HBox>
+						<spacing>20</spacing>
+						<Label text="[대여자 정보]            " />
+						<fx:define>
+							<ToggleGroup fx:id="typeGroup" />
+						</fx:define>
+						<children>
+							<RadioButton fx:id="rbGeneral" userData="일반"
+								text="일반" toggleGroup="$typeGroup" />
+							<RadioButton fx:id="rbCompany" userData="회사"
+								text="회사" toggleGroup="$typeGroup" />
+						</children>
+					</HBox>
+					<HBox>
+						<spacing>20</spacing>
+						<Button fx:id="btnHallRegit">극장등록</Button>
+						<Button fx:id="btnEquipRegit">설비등록</Button>
+					</HBox>
+				</HBox>
+
+				<HBox>
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="10" />
+					</padding>
+					<spacing>10</spacing>
+					<children>
+						<Label text="          단체명/회사명 :" />
+						<TextField fx:id="txtComName" prefWidth="150" />
+						<Label text="사업자 번호 :" />
+						<TextField fx:id="txtNum" prefWidth="100" />
+						<Label text="대표자 명 :" />
+						<TextField fx:id="txtCeoName" prefWidth="100" />
+					</children>
+				</HBox>
+
+				<HBox>
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="50" />
+					</padding>
+					<spacing>10</spacing>
+					<children>
+						<Label text="담당자 명 :" />
+						<TextField fx:id="txtName" prefWidth="100" />
+						<Label text="주소 :" />
+						<TextField fx:id="txtAddr" prefWidth="400" />
+					</children>
+				</HBox>
+
+				<HBox>
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="50" />
+					</padding>
+					<spacing>10</spacing>
+					<children>
+						<Label text="연락처 :" />
+						<TextField fx:id="txtPhone" prefWidth="130" />
+						<Label text="이메일 :" />
+						<TextField fx:id="txtEmail" prefWidth="200" />
+						<Label text="장르 :" />
+						<TextField fx:id="txtGenre" prefWidth="70" />
+					</children>
+				</HBox>
+
+				<HBox>
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="50" />
+					</padding>
+					<spacing>10</spacing>
+					<children>
+						<Label text="공연제목 :" />
+						<TextField fx:id="txtTitle" prefWidth="150" />
+						<Label text="입장권 예상금액 :" />
+						<TextField fx:id="txtPrice" prefWidth="100" />
+						<Label text="원" />
+					</children>
+				</HBox>
+
+				<HBox>
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="50" />
+					</padding>
+					<spacing>10</spacing>
+					<children>
+						<Label text="공연 시작 시간 :" />
+						<TextField fx:id="txtStartTime" prefWidth="150" />
+						<Label text="공연 종료 시간 :" />
+						<TextField fx:id="txtEndTime" prefWidth="150" />
+					</children>
+				</HBox>
+
+				<HBox alignment="CENTER">
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="10" />
+					</padding>
+					<spacing>20</spacing>
+					<Button fx:id="btnRegit">등록</Button>
+					<Button fx:id="btnCusEdit">수정</Button>
+					<Button fx:id="btnDelete">삭제</Button>
+					<Button fx:id="btnEmail">이메일</Button>
+				</HBox>
+
+				<HBox alignment="CENTER">
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="10" />
+					</padding>
+					<Label
+						text="------------------------------------------------------------------------------------------------------" />
+				</HBox>
+
+				<Label text="[극장 대관 정보]" />
+
+				<HBox>
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="50" />
+					</padding>
+					<spacing>10</spacing>
+					<children>
+
+						<Label text="극장 이름 :" />
+						<ComboBox fx:id="cbHallType" promptText="선택"
+							prefWidth="100">
+						</ComboBox>
+						<Label text="단체명/회사명 :" />
+						<TextField fx:id="txtCName" prefWidth="150" />
+						<Label text="등록자 번호 :" />
+						<TextField fx:id="txtCNo" prefWidth="150" />
+					</children>
+				</HBox>
+
+				<HBox>
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="50" />
+					</padding>
+					<spacing>10</spacing>
+					<children>
+						<Label text="대관 날짜 :" />
+						<DatePicker fx:id="rentDate" prefWidth="150"
+							promptText="날짜를 선택하세요." />
+						<Label text="대관 타입 :" />
+						<ComboBox fx:id="cbRentType" promptText="선택"
+							prefWidth="100">
+						</ComboBox>
+						<Label text="장르 :" />
+						<ComboBox fx:id="cbGenre" promptText="선택" prefWidth="200">
+						</ComboBox>
+					</children>
+				</HBox>
+
+				<HBox>
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="50" />
+					</padding>
+					<spacing>10</spacing>
+					<children>
+						<Label text="대관 시간 :" />
+						<CheckBox fx:id="cbMorning" text="오전(9~12)" userData="오전"></CheckBox>
+						<CheckBox fx:id="cbNoon" text="오후(2~5)" userData="오후"></CheckBox>
+						<CheckBox fx:id="cbEvening" text="저녁(7~10)" userData="저녁"></CheckBox>
+						<Label text="대관 금액 :"></Label>
+						<TextField fx:id="txtRentalPrice" prefWidth="100"></TextField>
+					</children>
+				</HBox>
+
+				<HBox alignment="CENTER">
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="10" />
+					</padding>
+					<spacing>20</spacing>
+					<Button fx:id="btnNext">다음</Button>
+					<Button fx:id="btnCancel">예약취소</Button>
+				</HBox>
+
+				<HBox alignment="CENTER">
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="10" />
+					</padding>
+					<Label
+						text="------------------------------------------------------------------------------------------------------" />
+				</HBox>
+
+				<Label text="[설비 대여 추가 ]" />
+
+				<HBox>
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="50" />
+					</padding>
+					<spacing>10</spacing>
+					<Button fx:id="btnAddEquip">설비대여</Button>
+					<Label text="대관 번호 :" />
+					<TextField fx:id="txtRentNum" prefWidth="100" />
+					<Label text="극장 번호 :" />
+					<TextField fx:id="txtHallNum" prefWidth="100" />
+					<Label text="설비 대여 총액 :"></Label>
+					<TextField fx:id="txtEquipPrice" prefWidth="100"></TextField>
+				</HBox>
+				<HBox>
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="50" />
+					</padding>
+					<spacing>10</spacing>
+					<Label text="계약 금액 :"></Label>
+					<TextField fx:id="txtContractP" prefWidth="100"></TextField>
+					<Label text="완납 여부 :"></Label>
+					<ComboBox fx:id="cbDefault" promptText="선택"
+						prefWidth="100">
+					</ComboBox>
+					<Label text="초과 시간 :"></Label>
+					<TextField fx:id="txtExtraTime" prefWidth="70"></TextField>
+					<Label text="총액 :"></Label>
+					<TextField fx:id="txtTotalPrice" prefWidth="100"></TextField>
+				</HBox>
+
+				<HBox>
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="50" />
+					</padding>
+					<spacing>10</spacing>
+					<Label text="등록일 :"></Label>
+					<DatePicker fx:id="regitDate" prefWidth="150"
+						promptText="날짜를 선택하세요." />
+					<Label text="최종 수정일 :"></Label>
+					<DatePicker fx:id="finalDate" prefWidth="150"
+						promptText="날짜를 선택하세요." />
+				</HBox>
+
+				<HBox alignment="CENTER">
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="10" />
+					</padding>
+					<spacing>20</spacing>
+					<Button fx:id="btnRentRegit">등록</Button>
+					<Button fx:id="btnRentEdit">수정</Button>
+					<Button fx:id="btnRentCancel">대관취소</Button>
+					<Button fx:id="btnCalculated">완납</Button>
+					<Button fx:id="btnExit">종료</Button>
+				</HBox>
+			</VBox>
+
+			<VBox>
+				<padding>
+					<Insets top="10" right="10" bottom="10" left="10" />
+				</padding>
+				<spacing>10</spacing>
+				<children>
+					<HBox>
+						<spacing>10</spacing>
+						<Label text="대여자 정보 :"></Label>
+						<TextField fx:id="txtCusSearch" prefWidth="150"
+							promptText="단체명" />
+						<Button fx:id="btnCusSearch">검색</Button>
+						<Button fx:id="btnCusTotal">전체</Button>
+						<Button fx:id="btnSaveFileDir">저장 폴더 선택</Button>
+						<TextField fx:id="txtSaveFileDir" prefWidth="200" promptText="폴더를 선택하세요"/>
+						<Button fx:id="btnExcel">엑셀 파일</Button>
+						<Button fx:id="btnPDF">PDF 파일</Button>
+					</HBox>
+					<TableView fx:id="customerTable" prefHeight="670"
+						prefWidth="750">
+					</TableView>
+					<HBox>
+						<spacing>10</spacing>
+						<Label text="대관 정보 :"></Label>
+						<TextField fx:id="txtHallSearch" prefWidth="150"
+							promptText="단체명" />
+						<Button fx:id="btnHallSearch">검색</Button>
+						<Button fx:id="btnHallTotal">전체</Button>
+						<Label text="                         연도 선택 :" />
+						<ComboBox fx:id="cbYear" promptText="선택" prefWidth="100">
+						</ComboBox>
+						<Button fx:id="btnMonthlySales">월매출</Button>
+					</HBox>
+					<TableView fx:id="rentTable" prefHeight="670"
+						prefWidth="750">
+					</TableView>
+				</children>
+			</VBox>
+		</HBox>
+
+	</children>
+</VBox>
+

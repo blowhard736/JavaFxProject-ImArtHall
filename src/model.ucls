@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="model.AddEquipVO" project="IMArtHallRentalProgram" 
+    file="/IMArtHallRentalProgram/src/model/AddEquipVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="621" width="287" x="175" y="-194"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="model.RegitHallVO" project="IMArtHallRentalProgram" 
+    file="/IMArtHallRentalProgram/src/model/RegitHallVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="567" width="217" x="502" y="-194"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="model.RentalVO" project="IMArtHallRentalProgram" 
+    file="/IMArtHallRentalProgram/src/model/RentalVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="1143" width="576" x="759" y="-194"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="model.CustomerVO" project="IMArtHallRentalProgram" 
+    file="/IMArtHallRentalProgram/src/model/CustomerVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="945" width="493" x="1375" y="-194"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="model.RegitEquipVO" project="IMArtHallRentalProgram" 
+    file="/IMArtHallRentalProgram/src/model/RegitEquipVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="459" width="215" x="1908" y="-194"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+	fx:controller="control.AddEquipController" prefHeight="400"
+	prefWidth="650">
+	<padding>
+		<Insets top="10" right="10" bottom="10" left="10" />
+	</padding>
+	<children>
+		<Label text="[ 설비를 추가해 주세요 ]" />
+		<HBox>
+			<padding>
+				<Insets top="10" right="10" bottom="10" left="10" />
+			</padding>
+			<spacing>10</spacing>
+			<children>
+				<Label text="대관번호 :" />
+				<TextField fx:id="txtRentalNum" prefWidth="70"></TextField>
+				<Label text="품명 :" />
+				<ComboBox fx:id="cbEquipName" promptText="선택"
+					prefWidth="100">
+				</ComboBox>
+				<Label text="수량 :" />
+				<TextField fx:id="txtEquipNum" prefWidth="70"></TextField>
+				<Label text="대여비 :" />
+				<TextField fx:id="txtEquipPrice" prefWidth="100"></TextField>
+			</children>
+		</HBox>
+		<HBox>
+			<padding>
+				<Insets top="10" right="10" bottom="10" left="10" />
+			</padding>
+			<spacing>10</spacing>
+			<children>
+				<Label text="대여일 :" />
+				<DatePicker fx:id="rentDate"></DatePicker>
+				<Label text="반납일 :" />
+				<DatePicker fx:id="returnDate"></DatePicker>
+				<Label text="대여상태 :" />
+				<ComboBox fx:id="cbRentState" promptText="선택"
+					prefWidth="80"></ComboBox>
+			</children>
+		</HBox>
+		<HBox alignment="CENTER">
+			<padding>
+				<Insets top="10" right="10" bottom="10" left="10" />
+			</padding>
+			<spacing>20</spacing>
+			<children>
+				<Button fx:id="btnEdit">수정</Button>
+				<Button fx:id="btnDelete">삭제</Button>
+				<Button fx:id="btnAdd">추가</Button>
+				<Button fx:id="btnCancel">확인</Button>
+			</children>
+		</HBox>
+		<TableView fx:id="addTable" prefHeight="300" prefWidth="430">
+		</TableView>
+	</children>
+</VBox>
+

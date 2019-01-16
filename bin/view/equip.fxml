@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+	fx:controller="control.EquipController" prefHeight="300"
+	prefWidth="720">
+	<padding>
+		<Insets top="10" right="10" bottom="10" left="10" />
+	</padding>
+	<children>
+		<Label text="[ 설비를 등록해 주세요 ]" />
+		<HBox>
+			<padding>
+				<Insets top="10" right="10" bottom="10" left="10" />
+			</padding>
+			<spacing>20</spacing>
+			<children>
+				<VBox>
+					<HBox>
+						<padding>
+							<Insets top="10" right="10" bottom="10" left="10" />
+						</padding>
+						<spacing>10</spacing>
+						<Label text="타입 :" />
+						<ComboBox fx:id="cbEquipType" promptText="선택"
+							prefWidth="100">
+						</ComboBox>
+					</HBox>
+					<HBox>
+						<padding>
+							<Insets top="10" right="10" bottom="10" left="10" />
+						</padding>
+						<spacing>10</spacing>
+						<Label text="품명 :" />
+						<TextField fx:id="txtEquipName" prefWidth="150" />
+					</HBox>
+					<HBox>
+						<padding>
+							<Insets top="10" right="10" bottom="10" left="10" />
+						</padding>
+						<spacing>10</spacing>
+						<Label text="수량 :" />
+						<TextField fx:id="txtEquipNum" prefWidth="150" />
+					</HBox>
+					<HBox>
+						<padding>
+							<Insets top="10" right="10" bottom="10" left="10" />
+						</padding>
+						<spacing>10</spacing>
+						<Label text="대여가격 :" />
+						<TextField fx:id="txtEquipPrice" prefWidth="100" />
+						<Label text="원" />
+					</HBox>
+				</VBox>
+				<VBox>
+					<padding>
+						<Insets top="10" right="10" bottom="10" left="10" />
+					</padding>
+					<spacing>10</spacing>
+					<children>
+						<Label text="-설비 목록-" />
+						<TableView fx:id="equipTable" prefHeight="200"
+							prefWidth="430">
+						</TableView>
+					</children>
+				</VBox>
+			</children>
+		</HBox>
+		<HBox alignment="CENTER">
+			<padding>
+				<Insets top="10" right="10" bottom="10" left="10" />
+			</padding>
+			<spacing>20</spacing>
+			<Button fx:id="btnEdit">수정</Button>
+			<Button fx:id="btnDelete">삭제</Button>
+			<Button fx:id="btnRegit">등록</Button>
+			<Button fx:id="btnCancel">취소</Button>
+		</HBox>
+	</children>
+
+</VBox>
+
